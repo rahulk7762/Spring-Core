@@ -18,6 +18,46 @@
    <property name="name" value="Rahul" />
    <property name="gender" value="male" />
    <property name="address" ref="add" />
+   <property name="myList">
+   <list>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   
+   </list>
+   </property>
+   
+   
+   
+   <property name="setofContacts">
+   
+   <set>
+   <value>12</value>
+   <value>11</value>
+   <value>13</value>
+   <value>14</value>
+   <value>15</value>
+   </set>
+   </property>
+   
+   
+   
+   <property name="map">
+   
+   <map>
+   <entry key="1" value="Rahul" />
+   <entry key="2" value="Rohit" />
+   <entry key="3" value="Aman" />
+   <entry key="4" value="Deepak" />
+   <entry key="5" value="Rahul" />
+   </map>
+   </property>
+   
+   
    </bean>
    
    
@@ -27,7 +67,44 @@
    <constructor-arg name="name" value="kunal" />
    <constructor-arg name="gender" value="male" />
    <constructor-arg name="address" ref="add"/>
-   </bean>
+   <constructor-arg name="myList">
+   <list>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   <value>4526</value>
+   
+   </list>
+   </constructor-arg>
+   
+   
+   <constructor-arg name="setofContacts">
+   <set>
+   <value>12</value>
+   <value>11</value>
+   <value>13</value>
+   <value>14</value>
+   <value>15</value>
+   </set>
+   </constructor-arg>
+   
+   
+   
+   
+   <constructor-arg name="map">
+    <map>
+   <entry key="1" value="Rahul" />
+   <entry key="2" value="Rohit" />
+   <entry key="3" value="Aman" />
+   <entry key="4" value="Deepak" />
+   <entry key="5" value="shyam" />
+   </map>
+   </constructor-arg>
+   
+   </bean>  
    
 
 
