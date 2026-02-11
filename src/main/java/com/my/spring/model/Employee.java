@@ -19,14 +19,6 @@ public class Employee {
 		super();
 		
 	}
-	
-	
-	
-
-
-
-
-
 
 	public Employee(int id, String name, String gender, Address address, List<Integer> myList,
 			Set<Integer> setofContacts, Map<Integer, String> map) {
@@ -40,49 +32,29 @@ public class Employee {
 		this.map = map;
 	}
 
-
-
-
-
-
-
-
-
 	public List<Integer> getMyList() {
 		return myList;
 	}
-
-
 
 	public void setMyList(List<Integer> myList) {
 		this.myList = myList;
 	}
 
-
-
 	public Set<Integer> getSetofContacts() {
 		return setofContacts;
 	}
-
-
-
+	
 	public void setSetofContacts(Set<Integer> setofContacts) {
 		this.setofContacts = setofContacts;
 	}
-
-
 
 	public Map<Integer, String> getMap() {
 		return map;
 	}
 
-
-
 	public void setMap(Map<Integer, String> map) {
 		this.map = map;
 	}
-
-
 
 	public void setAddress(Address address) {
 		this.address = address;
@@ -126,12 +98,5 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + ", myList="
 				+ myList + ", setofContacts=" + setofContacts + ", map=" + map + "]";
 	}
-
-	
-	
-	
-	
-	
-	
 
 }
