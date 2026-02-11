@@ -13,11 +13,10 @@
    </bean>
     
     
-   <bean name="emp" class="com.my.spring.model.Employee">
+   <bean name="emp" class="com.my.spring.model.Employee" autowire="byType">
    <property name="id" value="1011" />
    <property name="name" value="Rahul" />
    <property name="gender" value="male" />
-   <property name="address" ref="add" />
    </bean>
    
    
