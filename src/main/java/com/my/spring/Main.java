@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		ApplicationContext ioc = new ClassPathXmlApplicationContext("InnerBean.xml");
 		
 		Employee bean = ioc.getBean("emp",Employee.class);
 		
