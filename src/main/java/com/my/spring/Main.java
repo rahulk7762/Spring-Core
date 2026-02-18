@@ -13,13 +13,12 @@ public class Main {
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
 		
 		Employee bean = ioc.getBean("emp",Employee.class);
-//		bean.setName("Rahul");
 		
 		System.out.println(bean);
 		
+		bean.getAddress().setCity("Palwal");
 		
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
+		System.out.println(bean);
 	}
 
 }

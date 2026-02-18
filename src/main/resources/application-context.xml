@@ -7,7 +7,9 @@
     <!-- bean definitions here -->
     
     
-   <bean name="add" class="com.my.spring.model.Address">
+    <!-- We have made extra bean here so i wanted be to implimanted seperaterly   -->
+    
+<!--   <bean name="add" class="com.my.spring.model.Address">
    <property name="city" value="Noida"/>
    <property name="state" value="UP"/>
    </bean>
@@ -20,14 +22,28 @@
    <property name="address" ref="add" />
    </bean>
    
+   -->
+   
+   
+   <!--
+	Here, we are going to implement the Inner Bean 
+   -->
+   
+   
+   <bean  id="emp" class="com.my.spring.model.Employee">
+   <property name="address">
+   <bean class="com.my.spring.model.Address" scope="prototype">
+   <property name="city" value="Noida" />
+   <property name="state" value="UP" />
+   </bean>
+   </property>
+   <property name="name" value="Shri" />
+   <property name="gender" value="male" />
+   </bean>
    
 
-   <bean name="emp2" class="com.my.spring.model.Employee">
-   <constructor-arg name="id" value="2311" />
-   <constructor-arg name="name" value="kunal" />
-   <constructor-arg name="gender" value="male" />
-   <constructor-arg name="address" ref="add"/>
-   </bean>
+
+   
    
 
 
