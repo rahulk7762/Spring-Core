@@ -7,10 +7,19 @@
     <!-- bean definitions here -->
     
     
-    <bean id="dbSingleton" class="com.my.spring.model.DatabaseSingleton" factory-method="getInstance" factory-bean="db"></bean>
     
-<bean id="db" class="com.my.spring.model.DatabaseSingleton"></bean>
+<!--    Since getInstance() is static
+👉 You DO NOT need two beans
+👉 Only one bean is enough-->
+
+
+<!--  If the entity pattern is  singleton design pattern and the instance return method(getInstnace) is static then it will be done for them only  -->
+<bean id="dbSingleton" class="com.my.spring.model.DatabaseSingleton" factory-method="getInstance"></bean>
    
+   
+   <!--if the instance return method(getInstnace) is non-static then it will be done for them only-->
+   <!--<bean id="dbSingleton" class="com.my.spring.model.DatabaseSingleton" factory-method="getInstance" factory-bean="db"></bean>
+<bean id="db" class="com.my.spring.model.DatabaseSingleton"></bean>-->
 
 
 </beans>
