@@ -13,7 +13,7 @@
 </bean>
 
 
-<bean name="empA" class="com.my.spring.model.Employee" init-method="xmlInitMethod"  destroy-method="xmlDestroyMethod" >
+<bean name="empA" class="com.my.spring.model.Employee" init-method="xmlInitMethod"  destroy-method="xmlDestroyMethod" autowire="byType" >
 		<property name="name" value="Mona"/>
 		<property name="gender" value="male"/>
 </bean>
