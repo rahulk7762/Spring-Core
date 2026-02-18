@@ -1,6 +1,9 @@
 package com.my.spring.model;
 
-public class Employee {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Employee implements InitializingBean, DisposableBean{
 
 	private int id;
 	private String name,gender;
@@ -55,6 +58,29 @@ public class Employee {
 		return gender;
 	}
 
+	//InitializingBean method
+		@Override
+		public void afterPropertiesSet() throws Exception {
+			System.out.println("Employee.afterPropertiesSet()");
+		}
+		
+		//DisposableBean method
+		@Override
+		public void destroy() throws Exception {
+			System.out.println("Employee.destroy()");
+		}
+		
+	
+	
+	private void xmlInitMethod() {
+		System.out.println("Employee.xmlInitMethod()");
+	}
+	
+	private void xmlDestroyMethod() {
+		System.out.println("Employee.xmlDestroyMethod()");
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
