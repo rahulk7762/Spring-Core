@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    
+    
+    
+    <!-- Parent bean-->
+    <!-- 
+	Spring registers beans using a bean name and id both.
+id → becomes the primary bean name
+name → also becomes bean name (can have multiple aliases) 
+
+-->
+
+<!-- abstract means it will not create the object or it will not instantiate -->
+    
+  <bean id="p1" abstract="true">
+  <property name="companyName" value="Ducat"></property>
+  <property name="EmpId" value="101"></property>
+  </bean>
+   
+   
+   <!-- Child bean -->
+   <!--  and one more thing we are not defining the class name in the bean which we are not going to instantiated-->
+   
+   <bean id="child" class="com.my.spring.model.Child" parent="p1">
+   <property name="age" value="23"></property>
+   <property name="salary" value="50000" ></property>
+   </bean>
+
+
+</beans>
