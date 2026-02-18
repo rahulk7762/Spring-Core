@@ -10,16 +10,14 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		ApplicationContext ioc = new ClassPathXmlApplicationContext("lookup.xml");
 		
-		Employee bean = ioc.getBean("emp",Employee.class);
-//		bean.setName("Rahul");
+		Employee bean = ioc.getBean("empA",Employee.class);
+		bean.setAddress(bean.applyAddress());
+		
 		
 		System.out.println(bean);
 		
-		
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		System.out.println(bean2);
 	}
 
 }

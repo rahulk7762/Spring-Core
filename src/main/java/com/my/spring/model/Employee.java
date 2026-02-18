@@ -1,24 +1,12 @@
 package com.my.spring.model;
 
-public class Employee {
+abstract public class Employee {
 
 	private int id;
 	private String name,gender;
 	private Address address;
 	
-	public Employee() {
-		super();
-		System.out.println("Employee()");
-	}
-	
-	public Employee(int id,String name,String gender,Address address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.address = address;
-		System.out.println("Employee(3)");
-	}
+	public abstract Address applyAddress();
 	
 	public void setAddress(Address address) {
 		this.address = address;
