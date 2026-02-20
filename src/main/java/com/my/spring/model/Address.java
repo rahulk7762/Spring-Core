@@ -1,5 +1,8 @@
 package com.my.spring.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 private String city,state;
 
