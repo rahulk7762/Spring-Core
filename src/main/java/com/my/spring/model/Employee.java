@@ -1,6 +1,7 @@
 package com.my.spring.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -49,6 +50,7 @@ public class Employee {
 		return adddress;
 	}
 	@Autowired
+	@Qualifier("address1")
 //	@Qualifier("address2")
 	public void setAdddress(IAddress adddress) {
 		System.out.println("Employee.setAdddress()");

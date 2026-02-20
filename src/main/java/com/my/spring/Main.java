@@ -3,7 +3,6 @@ package com.my.spring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.my.spring.model.Address;
 import com.my.spring.model.Employee;
 
 public class Main {
@@ -16,10 +15,7 @@ public class Main {
 		Employee emp = ioc.getBean(Employee.class);
 		
 		System.out.println(emp);
-		
-		
-		Address add = ioc.getBean(Address.class);
-		System.out.println(add);
+	
 	}
 
 }

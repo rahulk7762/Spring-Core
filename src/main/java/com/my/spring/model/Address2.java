@@ -1,5 +1,9 @@
 package com.my.spring.model;
 
+import org.springframework.stereotype.Component;
+
+@Component(value = "address2")
+//@Primary
 public class Address2 implements IAddress{
 
 	private String city = "shimla";
