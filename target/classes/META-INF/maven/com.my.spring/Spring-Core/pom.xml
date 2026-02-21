@@ -22,7 +22,12 @@
     <scope>compile</scope>
 </dependency>
 
-  
+
+  	<dependency>
+  		<groupId>spring-core</groupId>
+  		<artifactId>dpInjectPro</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
 </project>

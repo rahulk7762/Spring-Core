@@ -1,33 +1,36 @@
 package com.my.spring.model;
 
+
 public class Employee {
 
 	private int id;
 	private String name,gender;
-	private Address address;
+	private int salary;
 	
 	public Employee() {
 		super();
 		System.out.println("Employee()");
 	}
 	
-	public Employee(int id,String name,String gender,Address address) {
+	public Employee(int id,String name,String gender,int salary) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
-		this.address = address;
+		this.salary = salary;
 		System.out.println("Employee(3)");
 	}
 	
-	public void setAddress(Address address) {
-		this.address = address;
+	
+	
+	public int getSalary() {
+		return salary;
 	}
 
-	public Address getAddress() {
-		return address;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
-	
+
 	public void setId(int id) {
 		System.out.println("Employee.setId()");
 		this.id = id;
@@ -57,7 +60,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + "]";
 	}
 	
 	
